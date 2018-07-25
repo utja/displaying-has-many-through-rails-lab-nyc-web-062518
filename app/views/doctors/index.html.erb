@@ -1,0 +1,9 @@
+<h1>All Doctors</h1>
+
+<% @doctors.each do |d| %>
+<div>
+  <h2>Name: <%= d.name %></h2>
+  <h3>Number of patients: <%= d.patients.count %> </h3>
+  <%= link_to "Visit #{d.name}'s  Page", doctor_path(d) %>
+</div>
+<% end %>
